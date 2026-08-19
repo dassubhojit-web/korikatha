@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Shop Bengali sarees and handcrafted jewellery designs from KoriKatha." />
+    <title>Shop the Collection — KoriKatha</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Noto+Serif+Bengali:wght@500&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="shop.css?v=1" />
+    <script src="supabase-config.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="shop.js?v=1" defer></script>
+  </head>
+  <body>
+    <header class="shop-header">
+      <a class="brand" href="index.html"><img src="assets/korikatha-company-icon.svg" alt="" /> <span>KoriKatha <small lang="bn">কড়িকথা</small></span></a>
+      <a href="inventory.html">Inventory</a>
+    </header>
+    <main>
+      <section class="shop-hero">
+        <p>From Bengal, with love</p>
+        <h1>Wear a story.</h1>
+        <span>Explore our first sarees and jewellery designs inspired by Bengal.</span>
+      </section>
+      <section class="catalogue" aria-labelledby="catalogue-title">
+        <div class="catalogue-heading">
+          <div><p class="eyebrow">The complete collection</p><h2 id="catalogue-title">Shop KoriKatha</h2></div>
+          <p id="result-count" aria-live="polite">Loading the collection…</p>
+        </div>
+        <p class="catalogue-note">Introductory reference photography. Please confirm the exact colour, material and item details before ordering. <a href="image-credits.html">View image credits</a>.</p>
+        <div class="toolbar">
+          <label class="search"><span class="sr-only">Search products</span><input id="search" type="search" placeholder="Search by name, weave, motif or SKU" /></label>
+          <div class="tabs" role="group" aria-label="Product category">
+            <button class="active" data-category="all">All</button>
+            <button data-category="saree">Sarees</button>
+            <button data-category="jewellery">Jewellery</button>
+          </div>
+          <select id="sort" aria-label="Sort products">
+            <option value="featured">Featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="name">Name</option>
+          </select>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <button class="load-more" id="load-more" type="button">Show more products</button>
+      </section>
+    </main>
+    <footer><p>KoriKatha — <span lang="bn">কড়িকথা</span></p><a href="mailto:houseofkorikatha@gmail.com">houseofkorikatha@gmail.com</a><a href="image-credits.html">Image credits</a><p>Tradition Woven. Stories Adorned.</p></footer>
+  </body>
+</html>
