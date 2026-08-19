@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 600" role="img" aria-labelledby="title desc">
+  <title id="title">KoriKatha company icon</title>
+  <desc id="desc">A stylized cowrie shell above the KoriKatha name on a burgundy background.</desc>
+
+  <rect width="512" height="600" rx="72" fill="#6f1d1b"/>
+
+  <g transform="translate(0 25)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path
+      d="M256 74c80 0 143 79 143 177 0 112-62 194-143 194s-143-82-143-194c0-98 63-177 143-177Z"
+      stroke="#f5f0e7"
+      stroke-width="14"
+    />
+    <path
+      d="M179 171c40 13 65 51 77 111M333 171c-40 13-65 51-77 111M182 326c49-25 99-25 148 0"
+      stroke="#d5ab61"
+      stroke-width="14"
+    />
+    <circle cx="256" cy="125" r="13" fill="#f5f0e7" stroke="none"/>
+  </g>
+
+  <path d="M104 486h304" stroke="#d5ab61" stroke-width="2" opacity="0.55"/>
+
+  <text
+    x="256"
+    y="548"
+    fill="#f5f0e7"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="54"
+    font-weight="600"
+    letter-spacing="1"
+    text-anchor="middle"
+  >KoriKatha</text>
+</svg>
