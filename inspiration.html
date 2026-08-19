@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore KoriKatha's visual archive of sarees, jewellery and Indian craft traditions." />
+    <title>Bengal Style Inspiration — KoriKatha</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Noto+Serif+Bengali:wght@500&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="inspiration.css?v=1" />
+    <script src="inspiration.js?v=1" defer></script>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="index.html"><img src="assets/korikatha-company-icon.svg" alt="" /><span>KoriKatha<small lang="bn">কড়িকথা</small></span></a>
+      <nav><a href="shop.html">Shop</a><a href="index.html#story">Our story</a></nav>
+    </header>
+    <main>
+      <section class="hero">
+        <p>Our visual archive</p>
+        <h1>Bengal style<br /><em>inspiration.</em></h1>
+        <div><span>1,000</span><p>references celebrating sarees, jewellery, colour, texture and craft.</p></div>
+      </section>
+      <section class="gallery-shell" aria-labelledby="gallery-title">
+        <div class="gallery-heading"><div><p>Discover the archive</p><h2 id="gallery-title">A world of detail</h2></div><p id="result-count" aria-live="polite">Loading the archive…</p></div>
+        <p class="notice">This is an inspiration archive, not a product catalogue. Images depict cultural references and third-party objects; they are not items offered for sale by KoriKatha.</p>
+        <div class="toolbar">
+          <input id="gallery-search" type="search" placeholder="Search the archive" aria-label="Search inspiration images" />
+          <div class="tabs" role="group" aria-label="Inspiration category"><button class="active" data-category="all">All</button><button data-category="saree">Sarees</button><button data-category="jewellery">Jewellery</button></div>
+        </div>
+        <div class="gallery" id="gallery"></div>
+        <button class="load-more" id="load-more" type="button">Show more inspiration</button>
+      </section>
+    </main>
+    <footer><p>KoriKatha — <span lang="bn">কড়িকথা</span></p><p>Every image links to its original creator and license.</p><a href="shop.html">Shop KoriKatha →</a></footer>
+  </body>
+</html>
