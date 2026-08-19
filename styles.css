@@ -1195,6 +1195,12 @@ em {
   font-weight: 500;
 }
 
+.footer-links .footer-email {
+  margin-top: 7px;
+  color: #d5ab61;
+  overflow-wrap: anywhere;
+}
+
 .footer-links a:hover {
   color: white;
 }
