@@ -1190,6 +1190,7 @@ em {
 }
 
 .footer-contact address strong {
+  display: block;
   color: white;
   font-weight: 500;
 }
