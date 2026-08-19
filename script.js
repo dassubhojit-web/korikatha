@@ -54,13 +54,47 @@ previewDialog.addEventListener("click", (event) => {
 previewDialog.addEventListener("close", () => document.body.classList.remove("dialog-open"));
 
 document.querySelectorAll("[data-newsletter-form], [data-dialog-form]").forEach((form) => {
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    form.reset();
-    if (previewDialog.open) closeDialog();
-    showToast();
+    const submitButton = form.querySelector('button[type="submit"]');
+    const payload = Object.fromEntries(new FormData(form).entries());
+    const endpoint = form.action.replace("formsubmit.co/", "formsubmit.co/ajax/");
+
+    payload._replyto = payload.email;
+    submitButton.disabled = true;
+    form.setAttribute("aria-busy", "true");
+
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json();
+
+      if (!response.ok || result.success === false || result.success === "false") {
+        throw new Error("Form submission failed");
+      }
+
+      form.reset();
+      if (previewDialog.open) closeDialog();
+      showToast("Thank you—your email has been sent to KoriKatha.");
+    } catch (error) {
+      showToast("We couldn't send that right now. Please email houseofkorikatha@gmail.com directly.");
+    } finally {
+      submitButton.disabled = false;
+      form.removeAttribute("aria-busy");
+    }
   });
 });
+
+if (new URLSearchParams(window.location.search).get("subscribed") === "true") {
+  showToast("Thank you—your email has been sent to KoriKatha.");
+  window.history.replaceState({}, "", `${window.location.pathname}#newsletter-title`);
+}
 
 const revealObserver = new IntersectionObserver(
   (entries, observer) => {

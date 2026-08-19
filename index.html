@@ -23,7 +23,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css?v=5" />
-    <script src="script.js" defer></script>
+    <script src="script.js?v=2" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -314,7 +314,13 @@
         </div>
         <div class="newsletter-form-wrap">
           <p>New collections, artisan stories, styling inspiration and special notes—sent thoughtfully.</p>
-          <form class="newsletter-form" data-newsletter-form>
+          <form class="newsletter-form" action="https://formsubmit.co/houseofkorikatha@gmail.com" method="POST" data-newsletter-form>
+            <input type="hidden" name="_subject" value="New KoriKatha newsletter signup" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_url" value="https://dassubhojit-web.github.io/korikatha/" />
+            <input type="hidden" name="_next" value="https://dassubhojit-web.github.io/korikatha/?subscribed=true#newsletter-title" />
+            <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <label class="sr-only" for="email">Email address</label>
             <input id="email" name="email" type="email" placeholder="Your email address" autocomplete="email" required />
             <button type="submit" aria-label="Join the KoriKatha family">
@@ -380,7 +386,13 @@
       <p class="eyebrow">A new chapter begins soon</p>
       <h2 id="dialog-title" data-dialog-title>The KoriKatha collection</h2>
       <p>We’re putting the finishing touches on our first edit. Join the family and be the first to know when it arrives.</p>
-      <form class="dialog-form" data-dialog-form>
+      <form class="dialog-form" action="https://formsubmit.co/houseofkorikatha@gmail.com" method="POST" data-dialog-form>
+        <input type="hidden" name="_subject" value="New KoriKatha collection enquiry" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_url" value="https://dassubhojit-web.github.io/korikatha/" />
+        <input type="hidden" name="_next" value="https://dassubhojit-web.github.io/korikatha/?subscribed=true#newsletter-title" />
+        <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <label class="sr-only" for="preview-email">Email address</label>
         <input id="preview-email" name="email" type="email" placeholder="Your email address" autocomplete="email" required />
         <button class="button button-dark" type="submit">Keep me posted <span>→</span></button>

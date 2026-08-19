@@ -1111,6 +1111,21 @@ em {
   font-size: 0.72rem;
 }
 
+.form-honeypot {
+  position: absolute !important;
+  left: -10000px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.newsletter-form button:disabled,
+.dialog-form button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
 .site-footer {
   padding: 80px 5vw 28px;
   color: #d7d1c7;
