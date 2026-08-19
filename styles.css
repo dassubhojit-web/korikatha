@@ -1150,9 +1150,9 @@ em {
 
 .footer-links {
   display: grid;
-  max-width: 760px;
+  max-width: 940px;
   margin: 60px 0 70px auto;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 0.8fr 0.8fr 1.5fr;
   gap: 40px;
 }
 
@@ -1189,6 +1189,19 @@ em {
   gap: 3px;
 }
 
+.footer-contact .contact-location {
+  margin-bottom: 20px;
+}
+
+.contact-city {
+  margin-bottom: 2px;
+  color: #d5ab61;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .footer-contact address strong {
   display: block;
   color: white;
@@ -1196,7 +1209,7 @@ em {
 }
 
 .footer-links .footer-email {
-  margin-top: 7px;
+  margin: 2px 0 12px;
   color: #d5ab61;
   overflow-wrap: anywhere;
 }
@@ -1723,6 +1736,10 @@ em {
   .footer-links {
     grid-template-columns: 1fr 1fr;
     row-gap: 45px;
+  }
+
+  .footer-contact {
+    grid-column: 1 / -1;
   }
 
   .footer-bottom {
