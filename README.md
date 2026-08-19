@@ -21,11 +21,15 @@ The site is ready for GitHub Pages and can be served directly from the repositor
 - `shop.html` provides search, category filters, sorting, and stock labels for the first 10 products.
 - `data/products.json` is the static GitHub Pages catalogue fallback.
 - `inventory.html` is the authenticated inventory dashboard.
+- `inspiration.html` is a separately labelled 1,000-image visual reference archive.
+- `data/inspiration.json` records the source, creator, and license for every archive image.
 - `supabase/schema.sql` and `supabase/seed.sql` create and populate the protected backend.
 - `supabase/README.md` contains the one-time Supabase setup.
 - `scripts/generate_catalog.py` deterministically rebuilds all catalogue and import files.
 
 The two optional prompt manifests in `data/` contain five saree and five jewellery image jobs. Image generation requires `OPENAI_API_KEY`; it is intentionally never stored in this repository.
+
+Run `python3 scripts/build_inspiration_gallery.py` to resume or rebuild the licensed Wikimedia Commons archive. The downloader is intentionally rate-limited and stores resumable plans under `data/inspiration-plans/`.
 
 To create all optimized product images, copy `.env.example` to `.env.local`, add the API key, install `openai` and `Pillow` for Python, then run `sh scripts/generate_product_images.sh`.
 
