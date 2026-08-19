@@ -1178,6 +1178,22 @@ em {
   transition: color 160ms ease;
 }
 
+.footer-contact address {
+  display: flex;
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 0.83rem;
+  font-style: normal;
+  line-height: 1.55;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.footer-contact address strong {
+  color: white;
+  font-weight: 500;
+}
+
 .footer-links a:hover {
   color: white;
 }
