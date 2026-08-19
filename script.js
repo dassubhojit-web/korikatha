@@ -36,9 +36,9 @@ const showToast = (message = "Welcome to the KoriKatha family.") => {
 document.querySelectorAll("[data-shop]").forEach((button) => {
   button.addEventListener("click", () => {
     closeMenu();
-    dialogTitle.textContent = button.dataset.shop;
-    previewDialog.showModal();
-    document.body.classList.add("dialog-open");
+    const label = button.dataset.shop.toLowerCase();
+    const category = label.includes("saree") ? "saree" : label.includes("jewellery") ? "jewellery" : "all";
+    window.location.href = `shop.html${category === "all" ? "" : `?category=${category}`}`;
   });
 });
 
